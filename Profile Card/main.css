@@ -1,0 +1,223 @@
+:root {
+	--primary: lightgreen;
+	--black: black;
+
+	--card-width: 320px;
+	--image-width: calc(var(--card-width) / 1.5);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+	min-height: 150vh;
+	background-image: linear-gradient(to bottom right, lightgreen, green);
+	display:flex;
+	align-items: left;
+	justify-content: left;
+}
+
+/* CARDS */
+.card1 {
+	position:absolute;
+	margin-top: 5.5rem;
+	width: 100%;
+	max-width: var(--card-width);
+	background-color: #FFF;
+	border-radius: 1rem;
+	padding: 1rem;
+	text-align: left;
+	box-shadow: 3px 6px rgba(0, 0, 0, 0.1);
+	transition: 0.4s;
+}
+
+.card2 {
+	position:absolute;
+	margin-top: 6.5rem;
+	width: 100vh;
+	max-width: var(--card-width);
+	background-color: #FFF;
+	border-radius: 1rem;
+	padding: 1rem;
+	text-align: left;
+	box-shadow: 3px 6px rgba(0, 0, 0, 0.1);
+	transition: 0.4s;
+}
+
+/* CARD IMAGE */
+.card1 .image {
+	position: relative;
+	align-items: left;
+}
+
+.card2 .image {
+	position: relative;
+	align-items: left;
+	justify-content: center;
+}
+
+.card1 .image img {
+	width: 100%;
+	border-radius: 50%;
+	transition: 0.4s;
+	border: 3px solid var(--primary);
+}
+
+.card2 .image img {
+	width: 100%;
+	border-radius: 50%;
+	transition: 0.4s;
+	border: 3px solid var(--primary);
+	justify-content: center;
+}
+
+/* CARD HOVER */
+.card1:hover {
+	--card-width: 480px;
+	--image-width: calc(var(--card-width) / 2);
+}
+
+.card2:hover {
+	--card-width: 480px;
+	--image-width: calc(var(--card-width) / 2);
+}
+
+/* CARD HOVER IMG */
+.card1:hover .image {
+	margin-top: -4rem;
+	border-radius: 2rem;
+}
+
+.card2:hover .image {
+	margin-top: -4rem;
+	border-radius: 2rem;
+}
+
+.card1:hover .image img {
+	border-radius: 2rem;
+}
+
+.card2:hover .image img {
+	border-radius: 2rem;
+}
+
+/* CARD NAME */
+.card1 .name {
+	color: var(--black);
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.card2 .name {
+	color: var(--black);
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+ /* CARD CONTENT */
+.card1 .content {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: 0.4s;
+}
+
+.card2 .content {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: 0.4s;
+}
+
+ /* CARD CONTENT PARAGRAPH */
+.card1 .content p {
+	color: var(--black);
+	font-size: 1.125rem;
+}
+
+.card2 .content p {
+	color: var(--black);
+	font-size: 1.125rem;
+}
+
+/* CARD HOVER CONTENT */
+.card1:hover .content {
+	max-height: 300px;
+	opacity: 1;
+	overflow: visible;
+}
+
+.card2:hover .content {
+	max-height: 300px;
+	opacity: 1;
+	overflow: visible;
+}
+
+/* CARD BUTTONS */
+.card1 .buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.5rem;
+}
+
+.card2 .buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.5rem;
+}
+
+/* CARD BUTTONS BUTTON */
+.card1 .buttons button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+
+	display: block;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+	background-color: var(--primary);
+	color: black;
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 0 0.5rem;
+	min-width: 160px;
+	transition: 0.4s;
+}
+
+.card2 .buttons button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+
+	display: block;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+	background-color: var(--primary);
+	color: black;
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 0 0.5rem;
+	min-width: 160px;
+	transition: 0.4s;
+}
+
+/* CARD BUTTONS BUTTON HOVER */
+.card1 .buttons button:hover {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	transform: translateY(-0.5rem) scale(1.15);
+}
+
+.card2 .buttons button:hover {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	transform: translateY(-0.5rem) scale(1.15);
+}
